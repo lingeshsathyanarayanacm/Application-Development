@@ -1,0 +1,153 @@
+/* Main Container */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Side Panel */
+.side-panel {
+  width: 220px;
+  background-color: #2f65ad; /* Updated base color */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow for a professional look */
+  color: #ffffff; /* Updated text color to match the new base color */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: -4%;
+}
+
+.side-panel .profile-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.side-panel .profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+}
+
+.side-panel h2 {
+  margin-top: 0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.side-panel h2 .admin-panel-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-panel nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-panel nav ul li {
+  margin: 15px 0;
+  position: relative;
+}
+
+.side-panel nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent; /* Removed hover effects */
+}
+
+.side-panel nav ul li a:hover {
+  color: #ffffff;
+  background-color: #23508c; /* Slightly darker shade for hover */
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #ffffff; /* Light background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for a professional look */
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 30%;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #2f65ad; /* Updated heading color */
+}
+
+.card p {
+  margin: 10px 0;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .side-panel {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
