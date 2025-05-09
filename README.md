@@ -66,13 +66,13 @@ frontend/
 ## 📦 Setup & Run
 
 ### Backend
-bash
-cd backend
-./mvnw spring-boot:run 
+-bash
+-cd backend
+-./mvnw spring-boot:run 
 ### Frontend
-cd frontend
-npm install
-npm start
+-cd frontend
+-npm install
+-npm start
 ### Future Enhancement
 🧠 Future Enhancements
 AI-based feedback analysis
